@@ -4,13 +4,13 @@ import router from './router.js';
 import fileUpload from 'express-fileupload';
 import cors from 'cors';
 
-const PORT = 5000;
-const DB_URL = 'mongodb+srv://Elisabeth_Polska:fo517WOKg76DwRiY@cluster0.h3kkx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
+const PORT = process.env.PORT || 5000;
+const DB_URL = process.env.MONGODB_URI;
 
 const app = express()
 
 app.use(cors({
-  origin: 'http://localhost:1234',
+  origin: 'https://elisabethpo.github.io',
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
