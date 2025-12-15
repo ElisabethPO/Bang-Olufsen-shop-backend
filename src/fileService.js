@@ -12,11 +12,11 @@ class FileService {
       console.log('FILE!!!', file)
       const base64Image = await this.fileToBase64(file)
       console.log('base64Image', base64Image)
-      return null
 
-      return fileName;
+      return base64Image;
+
     } catch (e) {
-      console.error('Ошибка в FileService.saveFile:', e);
+      console.error('Error in FileService.saveFile:', e);
       throw e;
     }
   }
