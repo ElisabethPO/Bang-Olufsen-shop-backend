@@ -9,11 +9,7 @@ const DB_URL = process.env.MONGODB_URI;
 
 const app = express()
 
-app.use(cors({
-  origin: 'https://tech-showcase-store.onrender.com',
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  credentials: true
-}));
+app.use(cors());
 
 app.use(express.json())
 app.use(express.static('static'))
